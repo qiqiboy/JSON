@@ -12,4 +12,6 @@ stringify方法支持深度转换
 JSON.parse(str); //解析json字串
 
 JSON.stringify(obj); //将变量转为json字串
+JSON.stringify({arr:[1,2,true,null,undefined,NaN,{deep:{a:'b',b:'c','c':[4,5,6]}}]});
+//上面将输出 '{"arr":[1,2,true,null,null,null,{"deep":{"a":"b","b":"c","c":[4,5,6]}}]}'
 ````
