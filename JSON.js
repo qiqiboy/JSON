@@ -14,8 +14,8 @@ window.JSON=window.JSON || {
 			case 'number':
 			case 'boolean':
 				return isNaN(obj)?'null':''+obj;
+			case 'string':obj=obj.replace(/(["\\])/g,"\\$1");
 			case 'date':
-			case 'string':
 				return '"'+obj+'"';
 			case 'regexp':
 				return '{}';
